@@ -3,7 +3,7 @@ package api_testing.pojo;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Response{
+public class CurrentWeatherPojo {
 
 	@JsonProperty("rain")
 	private Rain rain;
