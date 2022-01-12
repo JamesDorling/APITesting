@@ -14,7 +14,7 @@ public class DefaultConfigMaker {
 
             File configLocation = new File("src/test/resources");
             if(!configLocation.mkdir()) {
-                System.out.println("Failed to make directory!");
+                System.out.println("Failed to make directory! Directory may already exist.");
             }
             properties.store(new FileWriter("src/test/resources/config.properties"), null);
 
