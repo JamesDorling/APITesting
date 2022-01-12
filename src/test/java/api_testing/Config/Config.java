@@ -1,20 +1,35 @@
 package api_testing.Config;
 
-import static org.junit.Assert.assertTrue;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
 
-import org.junit.Test;
+public class Config {
+    private static final Properties config;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    //TAKE NOTE OF THIS (static block. Eagerly loads the configs.)
+    static {
+        //Make a new properties (Initialise it)
+        config = new Properties();
+
+        if (!new File("src/test/resources/config.properties").exists()) {
+            DefaultConfigMaker.createDefaultConfig();
+        }
+        try {
+            //Load in the properties
+            config.load(new BufferedReader(new FileReader("src/test/resources/config.properties")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //Getters for the properties
+    public static String getApiKey(){ return config.getProperty("api_key"); }
+
+    public static void main(String[] args) {
+        System.out.println(getApiKey());
     }
 }
+
