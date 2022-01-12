@@ -9,7 +9,7 @@ import java.net.http.HttpResponse;
 
 public class ConnectionManager {
 
-    private static final String BASEURL = "https://openweathermap.org/";
+    private static final String BASEURL = "api.openweathermap.org/";
     private static final String ENDPOINT = "data/2.5/weather";
 
     public static String getConnection() {
