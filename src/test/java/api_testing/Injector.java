@@ -1,4 +1,4 @@
-package org;
+package api_testing;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
