@@ -1,4 +1,4 @@
-package org.example;
+package api_testing.Config;
 
 import static org.junit.Assert.assertTrue;
 
