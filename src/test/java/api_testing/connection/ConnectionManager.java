@@ -1,5 +1,5 @@
 package api_testing.connection;
-import api_testing.Config.Config;
+import api_testing.config.Config;
 
 import java.io.IOException;
 import java.net.URI;

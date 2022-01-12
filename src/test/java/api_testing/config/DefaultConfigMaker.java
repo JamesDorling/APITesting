@@ -1,4 +1,4 @@
-package api_testing.Config;
+package api_testing.config;
 
 import java.io.File;
 import java.io.FileWriter;
