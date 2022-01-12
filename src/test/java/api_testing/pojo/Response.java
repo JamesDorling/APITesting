@@ -1,4 +1,4 @@
-package org.pojo;
+package api_testing.pojo;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
