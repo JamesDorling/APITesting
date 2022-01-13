@@ -28,6 +28,14 @@ public class CurrentWeatherDTOTests {
         void IDExistsTest() {
             Assertions.assertNotNull(weatherDTO.getId());
         }
+
+        @Test
+        @DisplayName("DTO Finder test")
+        void test() {
+            //System.out.println(weatherDTO.getBase());
+            System.out.println(weatherDTO.getClouds().getAll());
+            weatherDTO.getClouds().showMeTheMoney();
+        }
     }
 
 }

@@ -1,12 +1,14 @@
 package api_testing.pojo;
 
 import java.util.List;
+
+import api_testing.DTO.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CurrentWeatherPojo {
 
 	@JsonProperty("rain")
-	private Rain rain;
+	private RainDTO rain;
 
 	@JsonProperty("visibility")
 	private Integer visibility;
@@ -15,25 +17,25 @@ public class CurrentWeatherPojo {
 	private Integer timezone;
 
 	@JsonProperty("main")
-	private Main main;
+	private MainDTO main;
 
 	@JsonProperty("clouds")
-	private Clouds clouds;
+	private CloudsDTO clouds;
 
 	@JsonProperty("sys")
-	private Sys sys;
+	private SysDTO sys;
 
 	@JsonProperty("dt")
 	private Integer dt;
 
 	@JsonProperty("coord")
-	private Coord coord;
+	private CoordDTO coord;
 
 	@JsonProperty("snow")
-	private Snow snow;
+	private SnowDTO snow;
 
 	@JsonProperty("weather")
-	private List<WeatherItem> weather;
+	private List<WeatherItemDTO> weather;
 
 	@JsonProperty("name")
 	private String name;
@@ -48,9 +50,9 @@ public class CurrentWeatherPojo {
 	private String base;
 
 	@JsonProperty("wind")
-	private Wind wind;
+	private WindDTO wind;
 
-	public Rain getRain(){
+	public RainDTO getRain(){
 		return rain;
 	}
 
@@ -62,15 +64,15 @@ public class CurrentWeatherPojo {
 		return timezone;
 	}
 
-	public Main getMain(){
+	public MainDTO getMain(){
 		return main;
 	}
 
-	public Clouds getClouds(){
+	public CloudsDTO getClouds(){
 		return clouds;
 	}
 
-	public Sys getSys(){
+	public SysDTO getSys(){
 		return sys;
 	}
 
@@ -78,15 +80,15 @@ public class CurrentWeatherPojo {
 		return dt;
 	}
 
-	public Coord getCoord(){
+	public CoordDTO getCoord(){
 		return coord;
 	}
 
-	public Snow getSnow(){
+	public SnowDTO getSnow(){
 		return snow;
 	}
 
-	public List<WeatherItem> getWeather(){
+	public List<WeatherItemDTO> getWeather(){
 		return weather;
 	}
 
@@ -106,7 +108,7 @@ public class CurrentWeatherPojo {
 		return base;
 	}
 
-	public Wind getWind(){
+	public WindDTO getWind(){
 		return wind;
 	}
 

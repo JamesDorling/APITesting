@@ -2,7 +2,7 @@ package api_testing.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Main{
+public class MainDTO {
 
 	@JsonProperty("temp")
 	private Double temp;
