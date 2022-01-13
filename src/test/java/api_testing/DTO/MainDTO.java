@@ -1,4 +1,6 @@
 package api_testing.DTO;
 
-public class MainDTO extends api_testing.pojo.MainDTO {
+import api_testing.pojo.Main;
+
+public class MainDTO extends Main {
 }
