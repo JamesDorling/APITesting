@@ -4,7 +4,7 @@ import api_testing.pojo.Coord;
 
 public class CoordDTO extends Coord {
     //LONGITUDE
-    public boolean longitudeIsNotNull() {
+    public boolean hasLongitude() {
         return getLon() != null;
     }
 
@@ -13,7 +13,7 @@ public class CoordDTO extends Coord {
     }
 
     //LATITUDE
-    public boolean latitudeIsNotNull() {
+    public boolean hasLatitude() {
         return getLat() != null;
     }
 
