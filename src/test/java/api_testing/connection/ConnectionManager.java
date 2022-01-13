@@ -41,6 +41,14 @@ public class ConnectionManager {
         return getURL() + "?zip=" + zipCode + "," + countryCode + "&appid=" + Config.getApiKey();
     }
 
+    public static String useMetric(String url) {
+        return url + "&units=metric";
+    }
+
+    public static String useImperial(String url) {
+        return url + "&units=imperial";
+    }
+
     public static int getStatusCode() {
         return getResponse().statusCode();
     }
