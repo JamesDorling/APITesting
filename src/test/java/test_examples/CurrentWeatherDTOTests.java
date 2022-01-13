@@ -30,11 +30,16 @@ public class CurrentWeatherDTOTests {
         }
 
         @Test
-        @DisplayName("DTO Finder test")
-        void test() {
-            //System.out.println(weatherDTO.getBase());
-            System.out.println(weatherDTO.getClouds().getAll());
-            weatherDTO.getClouds().showMeTheMoney();
+        @DisplayName("Deg Exists test")
+        void degIsNotNullTest() {
+            weatherDTO.getWind().assertDegNotNull();
+        }
+
+        @Test
+        @DisplayName("ID is correct length")
+        void idCorrectLength() {
+            weatherDTO.idIsCorrectLength()
+                    .assertTrue();
         }
     }
 

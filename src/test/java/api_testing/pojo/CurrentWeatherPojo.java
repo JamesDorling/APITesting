@@ -17,7 +17,7 @@ public class CurrentWeatherPojo {
 	private Integer timezone;
 
 	@JsonProperty("main")
-	private MainDTO main;
+	private Main main;
 
 	@JsonProperty("clouds")
 	private CloudsDTO clouds;
@@ -64,7 +64,7 @@ public class CurrentWeatherPojo {
 		return timezone;
 	}
 
-	public MainDTO getMain(){
+	public Main getMain(){
 		return main;
 	}
 
