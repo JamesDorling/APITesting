@@ -4,38 +4,6 @@ import api_testing.pojo.Main;
 
 public class MainDTO extends Main {
 
-    public boolean hasTemp() {
-        return getTemp().getClass() == Double.class;
-    }
-
-    public boolean hasTempMin() {
-        return getTempMin().getClass() == Double.class;
-    }
-
-    public boolean hasTempMax() {
-        return getTempMax().getClass() == Double.class;
-    }
-
-    public boolean hasFeelsLike() {
-        return getFeelsLike().getClass() == Double.class;
-    }
-
-    public boolean hasPressure() {
-        return getPressure().getClass() == Integer.class;
-    }
-
-    public boolean hasGrndLevel() {
-        return getGrndLevel().getClass() == Integer.class;
-    }
-
-    public boolean hasSeaLevel() {
-        return getSeaLevel().getClass() == Integer.class;
-    }
-
-    public boolean hasHumidity() {
-        return getHumidity().getClass() == Integer.class;
-    }
-
     public boolean tempNotNull() {
         return getTemp() != null;
     }

@@ -4,14 +4,6 @@ import api_testing.pojo.Rain;
 
 public class RainDTO extends Rain {
 
-    public boolean has3h() {
-        return getJsonMember3h().getClass() == Double.class;
-    }
-
-    public boolean has1h() {
-        return getJsonMember1h().getClass() == Double.class;
-    }
-
     public boolean is3hNotNull() {
         return getJsonMember3h() != null;
     }
