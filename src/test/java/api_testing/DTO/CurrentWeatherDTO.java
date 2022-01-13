@@ -1,28 +1,78 @@
 package api_testing.DTO;
 
-import api_testing.Assertable;
 import api_testing.pojo.CurrentWeatherPojo;
-import org.junit.jupiter.api.Assertions;
 
 public class CurrentWeatherDTO extends CurrentWeatherPojo {
-    public Assertable idIsCorrectLength() {
-        return new Assertable(getId().toString().length() == 7);
+
+    public int idLength() {
+        return getId().toString().length();
     }
 
-    public boolean codIsCorrectLength() {
-        return getCod().toString().length() == 3;
+    public int codLength() {
+        return getCod().toString().length();
     }
 
-    public boolean dtIsCorrectLength() {
-        return getDt().toString().length() == 10;
+    public int dtLength() {
+        return getDt().toString().length();
     }
 
     public boolean rainIsNotNull() {
         return getRain() != null;
     }
 
-    public void assertRainIsNotNull() {
-        Assertions.assertTrue(rainIsNotNull());
+    public boolean visibilityIsNotNull() {
+        return getVisibility() != null;
     }
 
+    public boolean timezoneIsNotNull() {
+        return getTimezone() != null;
+    }
+
+    public boolean mainIsNotNull() {
+        return getMain() != null;
+    }
+
+    public boolean cloudsIsNotNull() {
+        return getClouds() != null;
+    }
+
+    public boolean sysIsNotNull() {
+        return getSys() != null;
+    }
+
+    public boolean dtIsNotNull() {
+        return getDt() != null;
+    }
+
+    public boolean coordIsNotNull() {
+        return getCoord() != null;
+    }
+
+    public boolean snowIsNotNull() {
+        return getSnow() != null;
+    }
+
+    public boolean weatherIsNotNull() {
+        return getWeather() != null;
+    }
+
+    public boolean nameIsNotNull() {
+        return getName() != null;
+    }
+
+    public boolean codIsNotNull() {
+        return getCod() != null;
+    }
+
+    public boolean idIsNotNull() {
+        return getId() != null;
+    }
+
+    public boolean baseIsNotNull() {
+        return getBase() != null;
+    }
+
+    public boolean windIsNotNull() {
+        return getWind() != null;
+    }
 }
