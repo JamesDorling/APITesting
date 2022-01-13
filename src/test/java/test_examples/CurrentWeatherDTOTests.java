@@ -32,14 +32,14 @@ public class CurrentWeatherDTOTests {
         @Test
         @DisplayName("Deg Exists test")
         void degIsNotNullTest() {
-            weatherDTO.getWind().assertDegNotNull();
+            Assumptions.assumeTrue(weatherDTO.windIsNotNull());
+            Assertions.assertTrue(weatherDTO.getWind().degNotNull());
         }
 
         @Test
         @DisplayName("ID is correct length")
         void idCorrectLength() {
-            weatherDTO.idIsCorrectLength()
-                    .assertTrue();
+            Assertions.assertTrue(weatherDTO.idIsCorrectLength());
         }
     }
 
