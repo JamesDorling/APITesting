@@ -11,7 +11,7 @@ public class CurrentWeatherDTOTests {
 
     @BeforeEach
     void init() {
-        weatherDTO = injectDTO(getConnection("London", "UK"));
+        weatherDTO = injectDTO(getConnection("London", "uk"));
     }
 
     @Nested
