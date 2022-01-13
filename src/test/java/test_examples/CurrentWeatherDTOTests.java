@@ -43,4 +43,18 @@ public class CurrentWeatherDTOTests {
         }
     }
 
+    @Nested
+    @DisplayName("CoordDTO Tests")
+    class CoordDtoTests {
+        @Nested
+        @DisplayName("Checking values are not null")
+        class checkValuesAreNotNull {
+            @Test
+            @DisplayName("Is there a longitude coordinate?")
+            void isThereALongitudeCoordinate() {
+                Assertions.assertTrue(weatherDTO.getCoord().hasLongitude());
+            }
+        }
+    }
+
 }
