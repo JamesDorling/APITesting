@@ -36,6 +36,54 @@ public class MainDTO extends Main {
         return getHumidity() != null;
     }
 
+    public boolean tempKelvinAboveAbsoluteZero() {
+        return getTemp() >= 0;
+    }
+
+    public boolean tempCelsiusAboveAbsoluteZero() {
+        return getTemp() >= -273.15;
+    }
+
+    public boolean tempFahrenheitAboveAbsoluteZero() {
+        return getTemp() >= -459.67;
+    }
+
+    public boolean tempMinKelvinAboveAbsoluteZero() {
+        return getTempMin() >= 0;
+    }
+
+    public boolean tempMinCelsiusAboveAbsoluteZero() {
+        return getTempMin() >= -273.15;
+    }
+
+    public boolean tempMinFahrenheitAboveAbsoluteZero() {
+        return getTempMin() >= -459.67;
+    }
+
+    public boolean tempMaxKelvinAboveAbsoluteZero() {
+        return getTempMax() >= 0;
+    }
+
+    public boolean tempMaxCelsiusAboveAbsoluteZero() {
+        return getTempMax() >= -273.15;
+    }
+
+    public boolean tempMaxFahrenheitAboveAbsoluteZero() {
+        return getTempMax() >= -459.67;
+    }
+
+    public boolean feelsLikeKelvinAboveAbsoluteZero() {
+        return getFeelsLike() >= 0;
+    }
+
+    public boolean feelsLikeCelsiusAboveAbsoluteZero() {
+        return getFeelsLike() >= -273.15;
+    }
+
+    public boolean feelsLikeFahrenheitAboveAbsoluteZero() {
+        return getFeelsLike() >= -459.67;
+    }
+
     public boolean isPressurePositive() {
         return getPressure() >= 0;
     }
