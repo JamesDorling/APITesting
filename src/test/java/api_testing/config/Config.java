@@ -1,10 +1,11 @@
-package api_testing.Config;
+package api_testing.config;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
+//import api_testing.config.DefaultConfigMaker;
 
 public class Config {
     private static final Properties config;

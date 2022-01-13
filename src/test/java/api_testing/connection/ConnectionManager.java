@@ -1,5 +1,5 @@
 package api_testing.connection;
-import api_testing.Config.Config;
+import api_testing.config.Config;
 
 import java.io.IOException;
 import java.net.URI;
@@ -9,7 +9,7 @@ import java.net.http.HttpResponse;
 
 public class ConnectionManager {
 
-    private static final String BASEURL = "api.openweathermap.org/";
+    private static final String BASEURL = "https://api.openweathermap.org/";
     private static final String ENDPOINT = "data/2.5/weather";
 
     public static String getConnection() {
@@ -47,7 +47,7 @@ public class ConnectionManager {
 
     private static HttpResponse<String> getResponse() {
         HttpClient httpClient = HttpClient.newHttpClient();
-        HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(BASEURL + ENDPOINT)).build();
+        HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(BASEURL + ENDPOINT + "?q=London,uk&appid=" + Config.getApiKey())).build();
         HttpResponse<String> httpResponse = null;
         try {
             httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());

@@ -1,5 +1,6 @@
 package api_testing;
 
+import api_testing.DTO.CurrentWeatherDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
