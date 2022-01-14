@@ -28,9 +28,5 @@ public class Config {
 
     //Getters for the properties
     public static String getApiKey(){ return config.getProperty("api_key"); }
-
-    public static void main(String[] args) {
-        System.out.println(getApiKey());
-    }
 }
 
