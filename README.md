@@ -13,7 +13,8 @@ current weather section of the openweather api.
 
 ## How To Use
 To use this framework, download the project and try writing tests
-using the CurrentWeatherDTO.
+using the CurrentWeatherDTO. Also, please remember to input your API key into the config file that the program will 
+generate in the test/resources folder.
 
 ## Connection Manager
 The connection manager contains multiple methods to allow for different parameters to be passed in the connection,
