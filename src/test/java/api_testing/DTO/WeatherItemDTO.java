@@ -32,6 +32,25 @@ public class WeatherItemDTO extends WeatherItem {
     }
 
     //GENERAL
+    public boolean hasCorrectWeatherCondition() {
+        if (getId() >= 200 && getId() <= 232 ) {
+            return hasCorrectThunderstormWeatherCondition();
+        } else if (getId() >= 300 && getId() <= 321) {
+            return hasCorrectDrizzleWeatherCondition();
+        } else if (getId() >= 500 && getId() <= 531) {
+            return hasCorrectRainWeatherCondition();
+        } else if (getId() >= 600 && getId() <= 622) {
+            return hasCorrectSnowWeatherCondition();
+        } else if (getId() >= 700 && getId() <= 781) {
+            return hasCorrectAtmosphereWeatherCondition();
+        } else if (getId() == 800) {
+            return hasCorrectClearWeatherCondition();
+        } else if (getId() >= 800 && getId() <= 804) {
+            return hasCorrectCloudsWeatherCondition();
+        }
+        return false;
+    }
+
     public boolean hasCorrectThunderstormWeatherCondition() {
         String firstTwoCharactersOfIcon = getIcon().substring(0, 2);
         if (getMain().equals("Thunderstorm")) {
@@ -70,7 +89,32 @@ public class WeatherItemDTO extends WeatherItem {
         return false;
     }
 
-    //Atmosphere
+    public boolean hasCorrectAtmosphereWeatherCondition() {
+        String firstTwoCharactersOfIcon = getIcon().substring(0, 2);
+        if (firstTwoCharactersOfIcon.equals("50")) {
+            switch (getMain()) {
+                case "Mist":
+                    return ((getId() == 701));
+                case "Smoke":
+                    return ((getId() == 711));
+                case "Haze":
+                    return ((getId() == 721));
+                case "Dust":
+                    return ((getId() == 731 || getId() == 761));
+                case "Fog":
+                    return ((getId() == 741));
+                case "Sand":
+                    return ((getId() == 751));
+                case "Ash":
+                    return ((getId() == 762));
+                case "Squall":
+                    return ((getId() == 771));
+                case "Tornado":
+                    return ((getId() == 781));
+            }
+        }
+        return false;
+    }
 
     public boolean hasCorrectClearWeatherCondition() {
         String firstTwoCharactersOfIcon = getIcon().substring(0, 2);
