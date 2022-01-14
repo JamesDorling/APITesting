@@ -1,6 +1,7 @@
 package test_examples;
 
 import api_testing.DTO.CurrentWeatherDTO;
+import api_testing.pojo.CurrentWeatherPojo;
 import org.junit.jupiter.api.*;
 
 import static api_testing.Injector.*;
@@ -8,15 +9,17 @@ import static api_testing.connection.ConnectionManager.*;
 
 public class CurrentWeatherDTOTests {
     CurrentWeatherDTO weatherDTO;
+    CurrentWeatherPojo weatherPojo;
 
     @BeforeEach
     void init() {
         weatherDTO = injectDTO(getConnection("London", "uk"));
+        weatherPojo = injectDTO(getConnection("London", "uk"));
     }
 
     @Nested
     @DisplayName("CurrentWeatherDTO Tests")
-    class tests {
+    class experimentalTests {
         @Test
         @DisplayName("Successful connection test")
         void connectionCode200Test() {
@@ -48,4 +51,27 @@ public class CurrentWeatherDTOTests {
 
         }
     }
+
+    @Nested
+    @DisplayName("Example Test Environment")
+    class exampleTests {
+        @Test
+        @DisplayName("Example without Framework")
+        void frameworklessTest() {
+
+        }
+
+        @Test
+        @DisplayName("Example without Framework 2")
+        void frameworklessTest2() {
+
+        }
+
+        @Test
+        @DisplayName("Framework test")
+        void frameworkTest() {
+
+        }
+    }
+
 }

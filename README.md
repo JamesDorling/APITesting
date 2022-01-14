@@ -4,12 +4,12 @@ This project is for a testing framework, created for testing the
 current weather section of the openweather api.
 
 ## Contents
-* ### [How to use](#how-to-use)
-* ### [Connection Manager](#connection-manager)
-* ### [DTO](#DTO)
-* ### [Testing](#testing)
-* ### [Team Management](#Team-management)
-* ### [What we have learned](#what-have-we-learned)
+* [How to use](#how-to-use)
+* [Connection Manager](#connection-manager)
+* [DTO](#DTO)
+* [Testing](#testing)
+* [Team Management](#Team-management)
+* [What we have learned](#what-have-we-learned)
 
 ## How To Use
 To use this framework, download the project and try writing tests
@@ -31,7 +31,8 @@ the tests. For example, the calculations for the length of a key, or if any of t
 methods to work that out for you. All that you need to do is wrap it in an assertion/assumption.
 
 ## Testing
-
+This framework is internally tested to make sure that a connection is being successfully made and the data read from
+the API is being read correctly. Unfortunately however, we cannot give you a code coverage percentage at this time.
 
 ## Team Management
 Our team was managed in a scrum group using a board on trello. This board is available to read from this link:
