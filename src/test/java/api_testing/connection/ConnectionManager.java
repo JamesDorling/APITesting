@@ -60,7 +60,8 @@ public class ConnectionManager {
         try {
             httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
         } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.err.println("There was an error communicating with the API.");
         }
         return httpResponse;
     }

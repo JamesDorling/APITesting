@@ -39,8 +39,12 @@ public class CurrentWeatherDTOTests {
         @Test
         @DisplayName("ID is correct length")
         void idCorrectLength() {
-            Assertions.assertTrue(weatherDTO.idIsCorrectLength());
+            Assertions.assertTrue(weatherDTO.idLength() == 7);
+        }
+
+        @Test
+        @DisplayName("WeatherItem is not null")
+        void weatherItemIsNotNullTest() {
+
         }
     }
-
-}

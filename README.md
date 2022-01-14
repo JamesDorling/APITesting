@@ -9,7 +9,6 @@ current weather section of the openweather api.
 * ### [DTO](#DTO)
 * ### [Testing](#testing)
 * ### [Team Management](#Team-management)
-* ### [Resources Used](#resources-used)
 * ### [What we have learned](#what-have-we-learned)
 
 ## How To Use
