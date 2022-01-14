@@ -39,22 +39,25 @@ public class CurrentWeatherDTOTests {
         @Test
         @DisplayName("ID is correct length")
         void idCorrectLength() {
-            Assertions.assertTrue(weatherDTO.idIsCorrectLength());
+            Assertions.assertTrue(weatherDTO.idLength() == 7);
+        }
+
+        @Test
+        @DisplayName("WeatherItem is not null")
+        void weatherItemIsNotNullTest() {
+
         }
     }
 
     @Nested
     @DisplayName("CoordDTO Tests")
     class CoordDtoTests {
-        @Nested
-        @DisplayName("Checking values are not null")
-        class checkValuesAreNotNull {
-            @Test
-            @DisplayName("Is there a longitude coordinate?")
-            void isThereALongitudeCoordinate() {
-                Assertions.assertTrue(weatherDTO.getCoord().hasLongitude());
+        @Test
+        @DisplayName("Is there a longitude coordinate?")
+        void isThereALongitudeCoordinate() {
+                Assertions.assertTrue(weatherDTO.getCoord().longitudeIsNotNull());
             }
-        }
+
     }
 
 }
